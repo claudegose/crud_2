@@ -11,15 +11,41 @@
 <body>
 <h1 align="center" style="color:#2471A3  ;">Dream Location Planner</h1>
 <?php require_once "process.php"; ?>
-<?php $mysqli = new mysqli->query("SELECT * FROM data") or die($mysqli->error)
-function pre_r($result)
-{
-    echo "<pre>";
-    print_r($array);
-    echo "</pre>";
-
-}
+<div class="container">
+<?php
+$mysqli = new mysqli("localhost", "root","root","crud") or die(mysqli_error($mysqli));
+$result = $mysqli->query("SELECT * FROM data") or die($mysqli->error);
 ?>
+
+<div class="row justify-content-center">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Location</th>
+            <th colspan="2">Action</th>
+        </tr>
+        </thead>
+
+        <?php
+        while ($row = $result->fetch_assoc()): ?>
+        <tr>
+            <td><?php echo $row["name"]; ?></td>
+            <td><?php echo $row["location"]; ?></td>
+            <td></td>
+        </tr>
+        <?php endwhile; ?>
+    </table>
+
+</div>
+<?php
+    function pre_r($array){
+        echo "<pre>";
+        print_r($array);
+        echo "</pre>";
+    }
+    ?>
+
 <div class="col-lg-4 col-md-4 col-sm-4 container justify-content-center">
 <form action="process.php" method="POST">
              <div class="form-group text-center ">
@@ -34,6 +60,7 @@ function pre_r($result)
                 <button type="submit" class="btn btn-outline-dark " name="save">Save</button>
             </div>
 </form>
+</div>
 </div>
 
 
