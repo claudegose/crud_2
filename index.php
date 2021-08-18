@@ -9,19 +9,19 @@
     <title>CRUD</title>
 </head>
 <body>
-<div class="row justify-content-center">
-<form action="" method="post">
-            <div class="form-group">
+<?php require_once "process.php"; ?>
+<div class="col-lg-4 col-md-4 col-sm-4 container justify-content-center">
+<form action="process.php" method="post">
+             <div class="form-group">
                 <label>Name</label>
-
-            <input type="type" name="name" class="form-control" value="Enter your name">
+                <input type="type" name="name" class="form-control" value="Enter your name">
              </div>
              <div class="form-group">
-             <label>Enter your Dream Location</label>
-            <input type="type2" name="name2" class="form-control" value="Enter your Dream location">
+                <label>Enter your Dream Location</label>
+                <input type="type2" name="name2" class="form-control" value="Enter your Dream location">
             </div>
             <div class="form-group">
-            <button type="submit" name="save">Save</button>
+                <button type="submit" class="btn btn-outline-dark" name="save">Save</button>
             </div>
 </form>
 </div>
