@@ -9,19 +9,29 @@
     <title>CRUD</title>
 </head>
 <body>
+<h1 align="center" style="color:#2471A3  ;">Dream Location Planner</h1>
 <?php require_once "process.php"; ?>
+<?php $mysqli = new mysqli->query("SELECT * FROM data") or die($mysqli->error)
+function pre_r($result)
+{
+    echo "<pre>";
+    print_r($array);
+    echo "</pre>";
+
+}
+?>
 <div class="col-lg-4 col-md-4 col-sm-4 container justify-content-center">
-<form action="process.php" method="post">
-             <div class="form-group">
+<form action="process.php" method="POST">
+             <div class="form-group text-center ">
                 <label>Name</label>
-                <input type="type" name="name" class="form-control" value="Enter your name">
+                <input type="type" name="name" class="form-control" placeholder="Enter your name">
              </div>
-             <div class="form-group">
+             <div class="form-group text-center ">
                 <label>Enter your Dream Location</label>
-                <input type="type2" name="name2" class="form-control" value="Enter your Dream location">
+                <input type="type2" name="location" class="form-control" placeholder="Enter your Dream location">
             </div>
-            <div class="form-group">
-                <button type="submit" class="btn btn-outline-dark" name="save">Save</button>
+            <div class="form-group text-center ">
+                <button type="submit" class="btn btn-outline-dark " name="save">Save</button>
             </div>
 </form>
 </div>
