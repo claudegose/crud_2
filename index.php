@@ -9,7 +9,21 @@
     <title>CRUD</title>
 </head>
 <body>
-
+<div class="row justify-content-center">
+<form action="" method="post">
+            <div class="form-group">
+                <label>Name</label>
+            <input type="type" name="name" class="form-control" value="Enter your name">
+             </div>
+             <div class="form-group">
+             <label>Enter your Dream Location</label>
+            <input type="type2" name="name2" class="form-control" value="Enter your Dream location">
+            </div>
+            <div class="form-group">
+            <button type="submit" name="save">Save</button>
+            </div>
+</form>
+</div>
 
 
 
